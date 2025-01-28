@@ -1,7 +1,7 @@
 # Privacyidea Kurulumu Microsoft RDP ve OpenVPN Entegrasyonu
 Bu makalede, PrivacyIDEA ve OpenVPN kullanarak iki faktörlü kimlik doğrulama (2FA) sistemi kurulumunun adımlarını ele alıyoruz.
 
----
+Linux dağıtımı olarak Ubuntu 24.04.1 kullanılmıştır.
 
 ### PrivacyIDEA Kurulumu
 
@@ -186,7 +186,7 @@ sudo nano /etc/pam.d/openvpn
 Dosyanın içeriği:
 ```plaintext
 auth    required                        pam_unix.so     try_first_pass
-auth    [success=1 default=die]         /lib64/security/pam_privacyidea.so      url=https://privacyidea.net.tr prompt=privacyIDEA_Authentication
+auth    [success=1 default=die]         /lib64/security/pam_privacyidea.so      url=https://domainadiniz.org prompt=privacyIDEA_Authentication
 auth    requisite                       pam_deny.so
 auth    required                        pam_permit.so
 account sufficient                      pam_permit.so
