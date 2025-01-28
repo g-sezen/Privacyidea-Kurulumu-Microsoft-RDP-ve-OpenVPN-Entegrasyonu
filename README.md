@@ -1,1 +1,1 @@
-(/Kurulum.md)
+![Kurulum](Kurulum.md)
