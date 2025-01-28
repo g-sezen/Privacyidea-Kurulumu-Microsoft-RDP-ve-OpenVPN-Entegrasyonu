@@ -1,0 +1,173 @@
+# Ubunutu üzerinde saat ayarlarını kontrol ediyorum.
+sudo timedatectl set-timezone Europe/Istanbul
+# Wget ile güncel privacyidea sürümünü çekip python üzerine kurulumunu yapıyorum.
+wget https://github.com/privacyidea/privacyidea/archive/refs/tags/v3.10.2.tar.gz
+tar -zxvf v3.10.2.tar.gz
+cd privacyidea-3.10.2/
+sudo apt install python3-pip
+pip install -r requirements.txt  --break-system-packages
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+sudo apt install python3-pip
+sudo pip install virtualenv --break-system-packages
+sudo virtualenv -p /usr/bin/python3 /opt/privacyidea
+cd /opt/privacyidea
+source bin/activate
+sudo pip install privacyidea --break-system-packages
+sudo chown -R $(whoami) /opt/privacyidea/
+pip install privacyidea  --break-system-packages
+wget https://lancelot.netknights.it/NetKnights-Release.asc
+sudo mv NetKnights-Release.asc /etc/apt/trusted.gpg.d/
+sudo add-apt-repository http://lancelot.netknights.it/community/noble/stable
+sudo apt update
+sudo apt install privacyidea-apache2
+# Web arayüzünden erişim için kullanıcı bilgilerini tanımlıyorum.
+sudo pi-manage admin add admin -e admin@localhost
+# Web arayüz dilini ingilizce yapmak için aşağıdaki alanı editliyorum.
+# DEFAULT_LANGUAGE_LIST = ['en', 'de', 'nl', 'zh_Hant', 'fr', 'es', 'tr', 'cs', 'it']  #:
+# Türkçe çeviri problemli olduğu için sadece inziliceyi bırakıyorum.
+# DEFAULT_LANGUAGE_LIST = ['en']  #:
+sudo nano /opt/privacyidea/lib/python3.12/site-packages/privacyidea/webui/login.py
+sudo reboot
+sudo nano /etc/privacyidea/pi.cfg
+# Kullanıcı bilgilerini alıyorum
+pi:EnQaAwbrs2iP
+
+# sistemde root ile oturum açmadan önce root şifresini belirliyorum ve root ile oturum açıyorum.
+mysql -u root -p
+# Kullanıcılar için bir databse oluşturuyorum.
+CREATE DATABASE rdp_users CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+# Oluşturduğum database için pi kullanıcısına gerekli izinleri sağlyorum.
+USE rdp_users
+GRANT ALL PRIVILEGES ON rdp_users.* TO 'pi'@'localhost';
+# Oluşturduğum database için primary key oluşturuyorum.
+ALTER TABLE rdp_users ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY;
+FLUSH PRIVILEGES;
+
+# Sistemde oturum açyorum.
+https://192.168.20.42/#!/config/resolvers/ldap
+#Create a new SQL Resolver
+Resolver name: mysql-resolver
+Driver: mysql+pymysql
+Server: 127.0.0.1
+Port: 3306
+Database :rdp_users
+User: pi
+Password: EnQaAwbrs2iP
+Edit user store seçili
+Password Hash for editable users: SSHA512CRYPT
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY, -- Benzersiz kullanıcı ID'si
+    username VARCHAR(255) NOT NULL UNIQUE, -- Kullanıcı adı (zorunlu)
+    password VARCHAR(255), -- Kullanıcı şifresi (isteğe bağlı)
+    email VARCHAR(255), -- Kullanıcı e-posta adresi
+    firstname VARCHAR(255), -- Kullanıcı adı
+    lastname VARCHAR(255), -- Kullanıcı soyadı
+    mobile VARCHAR(20), -- Kullanıcı telefon numarası
+    enabled BOOLEAN DEFAULT TRUE -- Kullanıcının etkin durumu
+);
+
+{"username": "username", "surname": "lastname", "givenname": "firstname", "email": "email", "mobile": "mobile", "description": "description", "userid": "id"}
+
+sudo privacyidea-token-janitor find --serial TOTP00010917 --action delete
+
+#OpenVPN tarafında 2FA kurulumu
+
+sudo timedatectl set-timezone Europe/Istanbul
+
+# Secure OpenVPN server installer for Debian, Ubuntu, CentOS, Amazon Linux 2, Fedora, Oracle Linux 8, Arch Linux, Rocky Linux and AlmaLinux.
+# https://github.com/angristan/openvpn-install
+
+# Dosyayı buradan indirip kuruluma başlıyorum.
+wget https://raw.githubusercontent.com/angristan/openvpn-install/refs/heads/master/openvpn-install.sh
+
+chmod +x openvpn-install.sh
+sudo ./openvpn-install.sh
+
+# Linux üzerinde kullanıcımı oluşturuyorum.
+sudo adduser gokhan
+
+# OpenVPN üzerinde kullanıcımı ekliyorum.
+sudo ./openvpn-install.sh
+1) Add a new user
+
+Tell me a name for the client.
+The name must consist of alphanumeric character. It may also include an underscore or a dash.
+Client name: gokhan
+
+Do you want to protect the configuration file with a password?
+(e.g. encrypt the private key with a password)
+   1) Add a passwordless client
+   2) Use a password for the client
+Select an option [1-2]: 1
+
+# privacyidea-pam.so dosyasını sistemde derleyip oluşturuyorum.
+git clone https://github.com/privacyidea/privacyidea-pam
+cd privacyidea-pam
+
+# so dosyasını derlemek için aşağıdaki adımları yapıyorum.
+
+wget https://github.com/nlohmann/json/releases/download/v3.11.3/json.hpp
+mv include
+sudo apt install make g++ libcurl4-openssl-dev libssl-dev libpam0g-dev
+make
+make install
+sudo mkdir /lib64/security/
+sudo mv pam_privacyidea.so  /lib64/security
+
+# Pam dosyamızı tanımlıyorum. İçeriği aşağıdaki gibi olacak.
+# Ben Letsencrypt ile imzalanmış bir sertifika kullandığım için burada url adı giriyorum.
+# sudo nano /etc/hosts içine 192.168.20.42 privacyidea.net.tr satırını ekliyorum.
+sudo nano  /etc/pam.d/openvpn
+
+auth    required                        pam_unix.so     try_first_pass
+auth    [success=1 default=die]         /lib64/security/pam_privacyidea.so      url=https://privacyidea.net.tr	prompt=privacyIDEA_Authentication
+auth    requisite                       pam_deny.so
+auth    required                        pam_permit.so
+account sufficient                      pam_permit.so
+session sufficient                      pam_permit.so
+
+# OpenVPN server.conf dosyasını düzenliyorum aşağıdaki satırları ekliyorum.
+sudo nano  /etc/openvpn/server.conf
+
+verify-client-cert none
+username-as-common-name
+reneg-sec 0
+plugin /usr/lib/x86_64-linux-gnu/openvpn/plugins/openvpn-plugin-auth-pam.so "openvpn login USERNAME password PASSWORD 'please enter otp:' OTP"
+script-security 3
+
+# OpenVPN servisini restart ediyorum.
+sudo systemctl restart openvpn@server.service
+
+# OpenVPN Client dosyası içeriğinde şu satırlar olacak.
+auth-user-pass
+static-challenge "privacyIDEA_Authentication" 1
+setenv FRIENDLY_NAME "privacyIDEA_Authentication"
+
+# Örnek dosya aşağıdaki gibidir.
+client
+proto udp
+explicit-exit-notify
+remote 192.168.20.68 1194
+dev tun
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+verify-x509-name server_oKpk12lgaEOJ8GCl name
+auth SHA256
+auth-nocache
+cipher AES-128-GCM
+tls-client
+tls-version-min 1.2
+tls-cipher TLS-ECDHE-ECDSA-WITH-AES-128-GCM-SHA256
+#ignore-unknown-option block-outside-dns
+#setenv opt block-outside-dns # Prevent Windows 10 DNS leak
+verb 3
+auth-user-pass
+static-challenge "privacyIDEA_Authentication" 1
+setenv FRIENDLY_NAME "privacyIDEA_Authentication"
+...
