@@ -1,4 +1,4 @@
-# Privacyidea-Kurulumu-Microsoft-RDP-ve-OpenVPN-Entegrasyonu
+# Privacyidea Kurulumu Microsoft RDP ve OpenVPN Entegrasyonu
 Bu makalede, PrivacyIDEA ve OpenVPN kullanarak iki faktörlü kimlik doğrulama (2FA) sistemi kurulumunun adımlarını ele alıyoruz.
 
 ---
