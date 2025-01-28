@@ -56,8 +56,8 @@ sudo nano /opt/privacyidea/lib/python3.12/site-packages/privacyidea/webui/login.
 
 Sadece İngilizce dilini aktif edin:
 ```python
-# DEFAULT_LANGUAGE_LIST = ['en', 'de', 'nl', 'zh Hant', 'fr', 'es', 'tr', 'cs', 'it'] #:
-DEFAULT_LANGUAGE_LIST = ['en'] #:
+# DEFAULT_LANGUAGE_LIST = ['en', 'de', 'nl', 'zh Hant', 'fr', 'es', 'tr', 'cs', 'it']  #:
+DEFAULT_LANGUAGE_LIST = ['en']  #:
 ```
 
 3. Apache sunucusunu yeniden başlatın:
