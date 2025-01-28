@@ -1,1 +1,1 @@
-![Kurulum](Kurulum.md)
+![/images/link.png](Kurulum.md)
