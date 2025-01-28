@@ -131,6 +131,8 @@ sudo nano /etc/privacyidea/pi.cfg
 ![Resim 1](resimler/privacyidea-credential-provider-9.png)
 ![Resim 1](resimler/privacyidea-credential-provider-10.png)
 
+---
+
 Bu adımları tamamladıktan sonra, sisteminiz PrivacyIDEA ve RDP ile iki faktörlü kimlik doğrulama desteğiyle daha güvenli hale gelecektir.
 
 ### OpenVPN Tarafında 2FA Kurulumu
