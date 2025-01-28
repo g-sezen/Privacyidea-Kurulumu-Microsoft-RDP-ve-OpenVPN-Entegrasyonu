@@ -91,7 +91,7 @@ CREATE TABLE users (
 );
 ```
 
-3. Kullanıcı bilgilerini tanımlayın:
+3. MYSQL tarafında erişim için kullanacağımız kullanıcı bilgilerini aşağıdaki dosyadan alın.
 ```bash
 sudo nano /etc/privacyidea/pi.cfg
 ```
