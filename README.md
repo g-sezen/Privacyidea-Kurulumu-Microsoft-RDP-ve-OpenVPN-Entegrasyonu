@@ -154,8 +154,8 @@ sudo ./openvpn-install.sh
 sudo adduser gokhan
 sudo ./openvpn-install.sh
 ```
-   - Kullanıcı Adı: `gokhan`
-   - Şifre koruması: Şifresiz olarak ayarlayabilirsiniz.
+   - Clientname: `gokhan`
+   - Password: `Add a passwordless client`
 
 #### PrivacyIDEA ile PAM Entegrasyonu
 
