@@ -118,7 +118,8 @@ sudo nano /etc/privacyidea/pi.cfg
 8. Assign the token to a container bölümünden container ayarlayabilirsin.
 9. Enroll Token diyerek tokeni kullanıcıya atayın.
 10.RDP Yapacağınız sunucu üzerinde de aynı isimde bir kullanıcı tanımlayın.
-11. Kurulum aşamalarını aşağıdaki resimlere bakarak tamamlayın.
+11. Not : Kurulum Windows 2022 üzerinde gerçekleştirilmiştir.
+12. Kurulum aşamalarını aşağıdaki resimlere bakarak tamamlayın.
 
 ![Resim 1](resimler/privacyidea-credential-provider-1.png)
 ![Resim 1](resimler/privacyidea-credential-provider-2.png)
