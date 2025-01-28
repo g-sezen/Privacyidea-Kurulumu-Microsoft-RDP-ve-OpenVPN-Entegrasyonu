@@ -153,9 +153,11 @@ chmod +x openvpn-install.sh
 sudo ./openvpn-install.sh
 ```
 
-3. Yeni bir kullanıcı ekleyin:
+3. Linux sunucu üzerinde yeni bir kullanıcı ekleyin:
 ```bash
 sudo adduser gokhan
+```
+4. Oluşturduğunuz kullanıcıyı OpenVPN üzerinden bağlanabilmesi için ekleyin:
 sudo ./openvpn-install.sh
 ```
    - Clientname: `gokhan`
