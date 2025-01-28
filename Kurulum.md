@@ -211,6 +211,13 @@ script-security 3
 sudo systemctl restart openvpn@server.service
 ```
 
+5. OpenVPN istemci ayar dosyasına aşağıdaki satırları ekleyin:
+```bash
+auth-user-pass
+static-challenge "privacyIDEA_Authentication" 1
+setenv FRIENDLY_NAME "privacyIDEA_Authentication"
+```
+
 ---
 
 Bu adımları tamamladıktan sonra, sisteminiz PrivacyIDEA ve OpenVPN ile iki faktörlü kimlik doğrulama desteğiyle daha güvenli hale gelecektir.
