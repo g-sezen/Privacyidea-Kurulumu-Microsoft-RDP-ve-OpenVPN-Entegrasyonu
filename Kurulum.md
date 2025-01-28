@@ -7,7 +7,7 @@ Bu makalede, PrivacyIDEA ve OpenVPN kullanarak iki faktörlü kimlik doğrulama 
 
 #### Zaman Dilimi Ayarı
 
-Sunucu zaman dilimini ayarlamak için:
+Zaman dilimini ayarlayın:
 ```bash
 sudo timedatectl set-timezone Europe/Istanbul
 ```
