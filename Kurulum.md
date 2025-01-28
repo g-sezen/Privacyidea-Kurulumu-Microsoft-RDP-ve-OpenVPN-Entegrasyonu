@@ -157,11 +157,13 @@ sudo ./openvpn-install.sh
 ```bash
 sudo adduser gokhan
 ```
+
 4. Oluşturduğunuz kullanıcıyı OpenVPN üzerinden bağlanabilmesi için ekleyin:
 sudo ./openvpn-install.sh
-```
+```bash
    - Clientname: `gokhan`
    - Password: `Add a passwordless client`
+```
 
 #### PrivacyIDEA ile PAM Entegrasyonu
 
