@@ -127,12 +127,19 @@ Aşağıdaki görselleri takip ederek kurulumu tamamlayın.
 ![Image 5](images/webui/privacyidea-webui-005.png)
 
 4.1 Tokens bölümüne gidin. Enroll token bölümünden TOTP'yi seçin.
+
 4.2 Az önce oluşturduğunuz realmi seçin.
+
 4.3 Az önce oluşturduğunuz realmi seçin.
+
 4.4 MySQL'de oluşturduğunuz kullanıcı adını Kullanıcı Adı olarak girin.
+
 4.5 Pin alanını boş bırakın.
+
 4.6 Bir kapsayıcıyı, Token'ı bir kapsayıcıya ata'yı seçerek yapılandırabilirsiniz.
+
 4.7 Token'ı Kaydet'e tıklayarak kaydedin ve kullanıcıya atayın.
+
 4.8 ​​Not: Bağlandığınız RDP sunucusundaki kullanıcı adı, PrivacyIDEA'da tanımladığınız kullanıcı adıyla eşleşmelidir.
 
 ![Image 6](images/webui/privacyidea-webui-006.png)
