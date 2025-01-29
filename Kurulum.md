@@ -101,7 +101,8 @@ sudo nano /etc/privacyidea/pi.cfg
 
 #### PrivacyIDEA Web Arayüz Ayarları
 
-1. Yeni bir SQL Resolver tanımlayın:
+Aşağıdaki görselleri takip ederek kurulumu tamamlayın.
+1. Yeni bir SQL Resolver tanımlayın (Config > Users sekmesi).
    - Resolver Name: `mysql-resolver`
    - Driver: `mysql-pymysql`
    - Server: `127.0.0.1`
@@ -111,28 +112,85 @@ sudo nano /etc/privacyidea/pi.cfg
    - Password: `EnQaAwbrs2iP`
    - Mapping: `{ "username": "username", "surname": "lastname", "givenname": "firstname", "email": "email", "mobile": "mobile", "description": "description", "userid": "id" }`
 
-2. Yeni bir realm oluşturun ve default olarak ayarlayın.
-3. Users bölümünden kullanıcıyı kaydedin.
-4. Tokens bölümüne gelin. Enroll token bölümünden TOTP yi seçin.
-5. Realm olarak yeni oluştuğunuz realm i seçin.
-6. Username olarak mysql üzerinde oluşturduğunuz ismi girin.
-7. Pin kısmını boş geçin.
-8. Assign the token to a container bölümünden container ayarlayabilirsin.
-9. Enroll Token diyerek tokeni kullanıcıya atayın.
-10. Not: RDP yapacağınız sunucu üzerinde ki kullanıcı ile privacyidea üzerinde tanımladığınız kullanıcı adı aynı olmalıdır.
-11. Not : Kurulum Windows 2022 üzerinde gerçekleştirilmiştir.
-12. Kurulum aşamalarını aşağıdaki resimlere bakarak tamamlayın.
+![Image 1](images/webui/privacyidea-webui-001.png)
+
+![Image 2](images/webui/privacyidea-webui-002.png)
+
+2. Yeni bir realm oluşturun (Config > Realms sekmesi) ve bunu varsayılan olarak ayarlayın.
+
+![Image 3](images/webui/privacyidea-webui-003.png)
+
+![Image 4](images/webui/privacyidea-webui-004.png)
+
+3. Users sekmesinden kullanıcıyı kaydedin.
+
+![Image 5](images/webui/privacyidea-webui-005.png)
+
+4.1 Tokens bölümüne gidin. Enroll token bölümünden TOTP'yi seçin.
+4.2 Az önce oluşturduğunuz realmi seçin.
+4.3 Az önce oluşturduğunuz realmi seçin.
+4.4 MySQL'de oluşturduğunuz kullanıcı adını Kullanıcı Adı olarak girin.
+4.5 Pin alanını boş bırakın.
+4.6 Bir kapsayıcıyı, Token'ı bir kapsayıcıya ata'yı seçerek yapılandırabilirsiniz.
+4.7 Token'ı Kaydet'e tıklayarak kaydedin ve kullanıcıya atayın.
+4.8 ​​Not: Bağlandığınız RDP sunucusundaki kullanıcı adı, PrivacyIDEA'da tanımladığınız kullanıcı adıyla eşleşmelidir.
+
+![Image 6](images/webui/privacyidea-webui-006.png)
+
+![Image 7](images/webui/privacyidea-webui-007.png)
+
+![Image 8](images/webui/privacyidea-webui-008.png)
+
+5. Bunlar Sistem Yapılandırması'ndaki ayarlarımdır. İsterseniz ayarları kendi yapınıza göre değiştirebilirsiniz.
+
+![Image 9](images/webui/privacyidea-webui-009.png)
+
+6. Bunlar Privacyidea'da kullandığım policy ayarlarıdır.
+
+![Image 10](images/webui/privacyidea-webui-010.png)
+
+![Image 11](images/webui/privacyidea-webui-011.png)
+
+![Image 12](images/webui/privacyidea-webui-012.png)
+
+![Image 13](images/webui/privacyidea-webui-013.png)
+
+![Image 14](images/webui/privacyidea-webui-014.png)
+
+![Image 15](images/webui/privacyidea-webui-015.png)
+
+7. Denetim sekmesinden OTP doğrulamasının başarılı olduğunu gözlemleyin.
+
+![Image 16](images/webui/privacyidea-webui-016.png)
+
+### PrivacyIDEA Crendtial Provider Kurulumu
+
+1. Not: RDP yapacağınız sunucu üzerinde ki kullanıcı ile privacyidea üzerinde tanımladığınız kullanıcı adı aynı olmalıdır.
+
+2. Not : Kurulum Windows 2022 üzerinde gerçekleştirilmiştir.
+
+3. Aşağıdaki görselleri takip ederek kurulumu tamamlayın.
 
 ![Resim 1](images/privacyidea-credential-provider-1.png)
+
 ![Resim 2](images/privacyidea-credential-provider-2.png)
+
 ![Resim 3](images/privacyidea-credential-provider-3.png)
+
 ![Resim 4](images/privacyidea-credential-provider-4.png)
+
 ![Resim 5](images/privacyidea-credential-provider-5.png)
+
 ![Resim 6](images/privacyidea-credential-provider-6.png)
+
 ![Resim 7](images/privacyidea-credential-provider-7.png)
+
 ![Resim 8](images/privacyidea-credential-provider-8.png)
+
 ![Resim 9](images/privacyidea-credential-provider-9.png)
+
 ![Resim 10](images/privacyidea-credential-provider-10.png)
+
 
 ---
 
