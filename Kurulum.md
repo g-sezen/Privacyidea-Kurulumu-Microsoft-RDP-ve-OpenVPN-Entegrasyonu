@@ -123,16 +123,16 @@ sudo nano /etc/privacyidea/pi.cfg
 11. Not : Kurulum Windows 2022 üzerinde gerçekleştirilmiştir.
 12. Kurulum aşamalarını aşağıdaki resimlere bakarak tamamlayın.
 
-![Resim 1](resimler/privacyidea-credential-provider-1.png)
-![Resim 1](resimler/privacyidea-credential-provider-2.png)
-![Resim 1](resimler/privacyidea-credential-provider-3.png)
-![Resim 1](resimler/privacyidea-credential-provider-4.png)
-![Resim 1](resimler/privacyidea-credential-provider-5.png)
-![Resim 1](resimler/privacyidea-credential-provider-6.png)
-![Resim 1](resimler/privacyidea-credential-provider-7.png)
-![Resim 1](resimler/privacyidea-credential-provider-8.png)
-![Resim 1](resimler/privacyidea-credential-provider-9.png)
-![Resim 1](resimler/privacyidea-credential-provider-10.png)
+![Resim 1](images/privacyidea-credential-provider-1.png)
+![Resim 2](images/privacyidea-credential-provider-2.png)
+![Resim 3](images/privacyidea-credential-provider-3.png)
+![Resim 4](images/privacyidea-credential-provider-4.png)
+![Resim 5](images/privacyidea-credential-provider-5.png)
+![Resim 6](images/privacyidea-credential-provider-6.png)
+![Resim 7](images/privacyidea-credential-provider-7.png)
+![Resim 8](images/privacyidea-credential-provider-8.png)
+![Resim 9](images/privacyidea-credential-provider-9.png)
+![Resim 10](images/privacyidea-credential-provider-10.png)
 
 ---
 
