@@ -116,7 +116,7 @@ sudo nano /etc/privacyidea/pi.cfg
 7. Pin kısmını boş geçin.
 8. Assign the token to a container bölümünden container ayarlayabilirsin.
 9. Enroll Token diyerek tokeni kullanıcıya atayın.
-10. Not: RDP yapacağınız sunucu üzerinde ki kullanıcı ile privacyidea üzerinde tanımladığınız kullanıcı adı aynı isimde olmalıdır.
+10. Not: RDP yapacağınız sunucu üzerinde ki kullanıcı ile privacyidea üzerinde tanımladığınız kullanıcı adı aynı olmalıdır.
 11. Not : Kurulum Windows 2022 üzerinde gerçekleştirilmiştir.
 12. Kurulum aşamalarını aşağıdaki resimlere bakarak tamamlayın.
 
@@ -165,7 +165,7 @@ sudo ./openvpn-install.sh
 - Password: `Add a passwordless client`
 ```
 
-5. Not: VPN yapacağınız sunucu üzerinde ki kullanıcı ile privacyidea üzerinde tanımladığınız kullanıcı adı aynı isimde olmalıdır.
+5. Not: VPN yapacağınız sunucu üzerinde ki kullanıcı ile privacyidea üzerinde tanımladığınız kullanıcı adı aynı olmalıdır.
 
 #### PrivacyIDEA ile PAM Entegrasyonu
 
