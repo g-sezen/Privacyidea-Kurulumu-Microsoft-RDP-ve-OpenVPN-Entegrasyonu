@@ -1,7 +1,7 @@
 # Privacyidea Kurulumu Microsoft RDP ve OpenVPN Entegrasyonu
 Bu makalede, PrivacyIDEA ve OpenVPN kullanarak iki faktörlü kimlik doğrulama (2FA) sistemi kurulumunun adımlarını ele alıyoruz.
 
-Linux dağıtımı olarak Ubuntu 24.04.1 kullanılmıştır.
+Linux dağıtımı olarak Ubuntu 24.04.1 LTS kullanılmıştır.
 
 ### PrivacyIDEA Kurulumu
 
