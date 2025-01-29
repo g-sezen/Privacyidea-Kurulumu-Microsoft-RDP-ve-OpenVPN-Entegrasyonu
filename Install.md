@@ -124,15 +124,15 @@ sudo nano /etc/privacyidea/pi.cfg
 12. Complete the setup by following the images below.
 
 ![Image 1](images/privacyidea-credential-provider-1.png)
-![Image 1](images/privacyidea-credential-provider-2.png)
-![Image 1](images/privacyidea-credential-provider-3.png)
-![Image 1](images/privacyidea-credential-provider-4.png)
-![Image 1](images/privacyidea-credential-provider-5.png)
-![Image 1](images/privacyidea-credential-provider-6.png)
-![Image 1](images/privacyidea-credential-provider-7.png)
-![Image 1](images/privacyidea-credential-provider-8.png)
-![Image 1](images/privacyidea-credential-provider-9.png)
-![Image 1](images/privacyidea-credential-provider-10.png)
+![Image 2](images/privacyidea-credential-provider-2.png)
+![Image 3](images/privacyidea-credential-provider-3.png)
+![Image 4](images/privacyidea-credential-provider-4.png)
+![Image 5](images/privacyidea-credential-provider-5.png)
+![Image 6](images/privacyidea-credential-provider-6.png)
+![Image 7](images/privacyidea-credential-provider-7.png)
+![Image 8](images/privacyidea-credential-provider-8.png)
+![Image 9](images/privacyidea-credential-provider-9.png)
+![Image 10](images/privacyidea-credential-provider-10.png)
 
 ---
 
