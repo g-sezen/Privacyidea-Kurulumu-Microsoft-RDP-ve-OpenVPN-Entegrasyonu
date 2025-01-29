@@ -110,16 +110,20 @@ Complete the setup by following the images below.
    - User: `pi`
    - Password: `EnQaAwbrs2iP`
    - Mapping: `{ "username": "username", "surname": "lastname", "givenname": "firstname", "email": "email", "mobile": "mobile", "description": "description", "userid": "id" }`
-![Image 1](images/webui/FireShot Capture 001 - privacyIDEA Authentication System.png)
 
-![Image 2](images/webui/FireShot Capture 002 - privacyIDEA Authentication System.png)
+![Image 1](images/webui/privacyidea-webui-001.png)
+
+![Image 2](images/webui/privacyidea-webui-002.png)
 
 2. Create a new realm (Config > Realms) tab and set it as default.
-![Image 3](images/webui/FireShot Capture 003 - privacyIDEA Authentication System.png)
-![Image 4](images/webui/FireShot Capture 004 - privacyIDEA Authentication System.png)
+
+![Image 3](images/webui/privacyidea-webui-003.png)
+
+![Image 4](images/webui/privacyidea-webui-004.png)
 
 4. Register the user from the Users tab.
-![Image 5](images/webui/FireShot Capture 005 - privacyIDEA Authentication System.png)
+
+![Image 5](images/webui/privacyidea-webui-005.png)
 
 5.1 Go to the Tokens section. Select TOTP from the Enroll token section.
 5.2 Choose the realm you just created.
@@ -129,36 +133,59 @@ Complete the setup by following the images below.
 5.6 You can configure a container by choosing Assign the token to a container.
 5.7 Enroll the token by clicking Enroll Token and assign it to the user.
 5.8 Note: The username on the RDP server you are connecting to must match the username you defined in PrivacyIDEA.
-![Image 6](images/webui/FireShot Capture 006 - privacyIDEA Authentication System.png)
-![Image 7](images/webui/FireShot Capture 007 - privacyIDEA Authentication System.png)
-![Image 8](images/webui/FireShot Capture 008 - privacyIDEA Authentication System.png)
+
+![Image 6](images/webui/privacyidea-webui-006.png)
+
+![Image 7](images/webui/privacyidea-webui-007.png)
+
+![Image 8](images/webui/privacyidea-webui-008.png)
 
 6. These are my settings on System Configuration. If you wish, you can make changes to the settings according to your own structure.
-![Image 9](images/webui/FireShot Capture 009 - privacyIDEA Authentication System.png)
-7. These are the policy settings I use on Privacyidea.
-![Image 10](images/webui/FireShot Capture 010 - privacyIDEA Authentication System.png)
-![Image 11](images/webui/FireShot Capture 011 - privacyIDEA Authentication System.png)
-![Image 12](images/webui/FireShot Capture 012 - privacyIDEA Authentication System.png)
-![Image 13](images/webui/FireShot Capture 013 - privacyIDEA Authentication System.png)
-![Image 14](images/webui/FireShot Capture 014 - privacyIDEA Authentication System.png)
-![Image 15](images/webui/FireShot Capture 015 - privacyIDEA Authentication System.png)
 
-8. Observe that the OTP verification was successful from the Audit tab.
-![Image 16](images/webui/FireShot Capture 016 - privacyIDEA Authentication System.png)
+![Image 9](images/webui/privacyidea-webui-009.png)
+
+7. These are the policy settings I use on Privacyidea.
+
+![Image 10](images/webui/privacyidea-webui-010.png)
+
+![Image 11](images/webui/privacyidea-webui-011.png)
+
+![Image 12](images/webui/privacyidea-webui-012.png)
+
+![Image 13](images/webui/privacyidea-webui-013.png)
+
+![Image 14](images/webui/privacyidea-webui-014.png)
+
+![Image 15](images/webui/privacyidea-webui-015.png)
+
+
+9. Observe that the OTP verification was successful from the Audit tab.
+
+![Image 16](images/webui/privacyidea-webui-016.png)
 
 ### PrivacyIDEA Credential Provider Installation
 
 1. Note: This setup was performed on Windows 2022.
 2. Complete the setup by following the images below.
+
 ![Image 1](images/privacyidea-credential-provider-1.png)
+
 ![Image 2](images/privacyidea-credential-provider-2.png)
+
 ![Image 3](images/privacyidea-credential-provider-3.png)
+
 ![Image 4](images/privacyidea-credential-provider-4.png)
+
 ![Image 5](images/privacyidea-credential-provider-5.png)
+
 ![Image 6](images/privacyidea-credential-provider-6.png)
+
 ![Image 7](images/privacyidea-credential-provider-7.png)
+
 ![Image 8](images/privacyidea-credential-provider-8.png)
+
 ![Image 9](images/privacyidea-credential-provider-9.png)
+
 ![Image 10](images/privacyidea-credential-provider-10.png)
 
 ---
