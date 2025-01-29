@@ -100,8 +100,9 @@ sudo nano /etc/privacyidea/pi.cfg
 ```
 
 #### PrivacyIDEA Web Interface Settings
+
 Complete the setup by following the images below.
-1. Define a new SQL Resolver (Config > Users) tab.
+1. Define a new SQL Resolver (Config > Users tab).
    - Resolver Name: `mysql-resolver`
    - Driver: `mysql-pymysql`
    - Server: `127.0.0.1`
@@ -115,24 +116,24 @@ Complete the setup by following the images below.
 
 ![Image 2](images/webui/privacyidea-webui-002.png)
 
-2. Create a new realm (Config > Realms) tab and set it as default.
+2. Create a new realm (Config > Realms tab) and set it as default.
 
 ![Image 3](images/webui/privacyidea-webui-003.png)
 
 ![Image 4](images/webui/privacyidea-webui-004.png)
 
-4. Register the user from the Users tab.
+3. Register the user from the Users tab.
 
 ![Image 5](images/webui/privacyidea-webui-005.png)
 
-5.1 Go to the Tokens section. Select TOTP from the Enroll token section.
-5.2 Choose the realm you just created.
-5.3 Choose the realm you just created.
-5.4 Enter the username you created on MySQL as the Username.
-5.5 Leave the Pin field blank.
-5.6 You can configure a container by choosing Assign the token to a container.
-5.7 Enroll the token by clicking Enroll Token and assign it to the user.
-5.8 Note: The username on the RDP server you are connecting to must match the username you defined in PrivacyIDEA.
+4.1 Go to the Tokens section. Select TOTP from the Enroll token section.
+4.2 Choose the realm you just created.
+4.3 Choose the realm you just created.
+4.4 Enter the username you created on MySQL as the Username.
+4.5 Leave the Pin field blank.
+4.6 You can configure a container by choosing Assign the token to a container.
+4.7 Enroll the token by clicking Enroll Token and assign it to the user.
+4.8 Note: The username on the RDP server you are connecting to must match the username you defined in PrivacyIDEA.
 
 ![Image 6](images/webui/privacyidea-webui-006.png)
 
@@ -140,11 +141,11 @@ Complete the setup by following the images below.
 
 ![Image 8](images/webui/privacyidea-webui-008.png)
 
-6. These are my settings on System Configuration. If you wish, you can make changes to the settings according to your own structure.
+5. These are my settings on System Configuration. If you wish, you can make changes to the settings according to your own structure.
 
 ![Image 9](images/webui/privacyidea-webui-009.png)
 
-7. These are the policy settings I use on Privacyidea.
+6. These are the policy settings I use on Privacyidea.
 
 ![Image 10](images/webui/privacyidea-webui-010.png)
 
@@ -159,14 +160,17 @@ Complete the setup by following the images below.
 ![Image 15](images/webui/privacyidea-webui-015.png)
 
 
-9. Observe that the OTP verification was successful from the Audit tab.
+7. Observe that the OTP verification was successful from the Audit tab.
 
 ![Image 16](images/webui/privacyidea-webui-016.png)
 
 ### PrivacyIDEA Credential Provider Installation
 
-1. Note: This setup was performed on Windows 2022.
-2. Complete the setup by following the images below.
+1. Note: The user name on the server you will RDP to must be the same as the username you defined on privacyidea.
+
+2. Note: This setup was performed on Windows 2022.
+
+3. Complete the setup by following the images below.
 
 ![Image 1](images/privacyidea-credential-provider-1.png)
 
