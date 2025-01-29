@@ -55,6 +55,9 @@ sudo nano /opt/privacyidea/lib/python3.12/site-packages/privacyidea/webui/login.
 ```
 
 Sadece İngilizce dilini aktif edin:
+
+Not: Yerel dildeki çeviri çok başarılı olmadığı için ingilizce tercih edilmiştir.
+
 ```python
 # DEFAULT_LANGUAGE_LIST = ['en', 'de', 'nl', 'zh Hant', 'fr', 'es', 'tr', 'cs', 'it']  #:
 DEFAULT_LANGUAGE_LIST = ['en']  #:
@@ -224,3 +227,6 @@ setenv FRIENDLY_NAME "privacyIDEA_Authentication"
 
 Bu adımları tamamladıktan sonra, sisteminiz PrivacyIDEA ve OpenVPN ile iki faktörlü kimlik doğrulama desteğiyle daha güvenli hale gelecektir.
 
+---
+
+Daha fazla yardıma ihtiyacınız olursa lütfen bana bildirin!
