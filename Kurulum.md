@@ -109,7 +109,6 @@ sudo nano /etc/privacyidea/pi.cfg
    - Mapping: `{ "username": "username", "surname": "lastname", "givenname": "firstname", "email": "email", "mobile": "mobile", "description": "description", "userid": "id" }`
 
 2. Yeni bir realm oluşturun ve default olarak ayarlayın.
-
 3. Users bölümünden kullanıcıyı kaydedin.
 4. Tokens bölümüne gelin. Enroll token bölümünden TOTP yi seçin.
 5. Realm olarak yeni oluştuğunuz realm i seçin.
@@ -117,7 +116,7 @@ sudo nano /etc/privacyidea/pi.cfg
 7. Pin kısmını boş geçin.
 8. Assign the token to a container bölümünden container ayarlayabilirsin.
 9. Enroll Token diyerek tokeni kullanıcıya atayın.
-10.RDP Yapacağınız sunucu üzerinde de aynı isimde bir kullanıcı tanımlayın.
+10. Not: RDP yapacağınız sunucu üzerinde ki kullanıcı ile privacyidea üzerinde tanımladığınız kullanıcı adı aynı isimde olmalıdır.
 11. Not : Kurulum Windows 2022 üzerinde gerçekleştirilmiştir.
 12. Kurulum aşamalarını aşağıdaki resimlere bakarak tamamlayın.
 
@@ -165,6 +164,8 @@ sudo ./openvpn-install.sh
 - Clientname: `gokhan`
 - Password: `Add a passwordless client`
 ```
+
+5. Not: VPN yapacağınız sunucu üzerinde ki kullanıcı ile privacyidea üzerinde tanımladığınız kullanıcı adı aynı isimde olmalıdır.
 
 #### PrivacyIDEA ile PAM Entegrasyonu
 
