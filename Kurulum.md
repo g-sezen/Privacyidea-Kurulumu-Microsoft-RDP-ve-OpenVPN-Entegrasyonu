@@ -41,7 +41,10 @@ sudo add-apt-repository http://lancelot.netknights.it/community/noble/stable
 sudo apt update
 sudo apt install privacyidea-apache2
 ```
-
+```bash
+Not: Eğer add-apt-repository: command not found hatası alırsanız o zaman aşağıdaki paketleri yüklemeniz gerekmekte.
+sudo apt-get install software-properties-common
+```
 #### Web Arayüz Ayarları
 
 1. Admin kullanıcısı oluşturun:
